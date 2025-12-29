@@ -1,0 +1,46 @@
+Integer Age=10;
+system.debug('apex : format : '+ Age);
+string JAge = JSON.serialize(Age);
+system.debug('JSON : format : '+ JAge);
+
+
+String Name ='Yogesh Pokharkar';
+String Jname = JSON.serialize(Name);
+system.debug('JSON : format : '+ Jname);
+
+Decimal Marks = 92.76;
+String jmarks = JSON.serialize(Marks);
+system.debug('JSON : format : '+ jmarks);
+
+Account[] acc = [Select id , Name, Phone, Fax ,Industry from Account limit 4];
+system.debug('apex : format : '+ acc);
+String Jacc = JSON.serialize(acc);
+system.debug('JSON : format : '+ Jacc);
+
+Map<String, String> sc = new Map<String, String>{
+    'TS' => 'hyd',
+    'TN' => 'Chen',
+    'KR' => 'TRV'
+};
+
+System.debug('Apex format : ' + sc);
+String JSc = JSON.serialize(sc);
+System.debug('JSON format : ' + JSc);
+
+
+Student sc = new Student();
+sc.Name = 'Yogesh';
+sc.Age = 23;
+
+String JS1 = JSON.serialize(sc); //serialize ---> include all 
+String JS2 = JSON.serialize(sc,True);//serialize(SupressNull) ---> include field containing data
+String JS3 = JSON.serializePretty(sc);//serialize(SupressNull) ---> in structural format
+String JS3 = JSON.serializePretty(sc,True);//serialize(SupressNull) ---> in structural format include field containing data
+
+System.debug('JSON format : ' + JS1);
+System.debug('JSON SupressNull format : ' + JS2);
+System.debug('JSON serializePretty format : ' + JS3);
+
+
+
+

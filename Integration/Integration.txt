@@ -1,0 +1,131 @@
+Exchange Of the information between across the orgnization is called Integration.
+
+type of information
+-------------------
+data
+metadata
+setting and configuration
+services
+
+why need
+--------
+sharing data and resources
+getting reuired data/information
+extended features
+
+
+types of Integration
+-----------------
+
+1) Tool based/Declarative
+Dataloader
+Mulesoft
+SSO
+Informatica
+DellBoomi 
+DB AMP
+Visual Code
+Eclipse
+ANT
+
+Program based Integration
+------------------------
+WEB service (WSDL)
+REST/SOAP => metadata API(SOAP)/Bulk API/Chatter API/ Streming API/ Patner/Enterprice API /Tooling API(SOAP)
+
+               REST & SOAP
+         Program based Integration(NON-Declarative)
+                                                      Security Integration
+                                      Salesforce <---------------------------------------> 3rd party System
+                                                       UI Integration
+                                      Salesforce <---------------------------------------> 3rd party System
+                                                      Logic Integration
+                                      Salesforce <---------------------------------------> 3rd party System
+                                                      data Integration                                                    
+                                      Salesforce <---------------------------------------> 3rd party System
+                                                                                                            
+                                                                                        Tool based Integration(Declarative)
+
+
+
+                       sending Data
+Salesforce  (APEX)   -------------------------------------------->  (.net) 3rd party System( SAP/AWS )
+
+                            1) Protocall 
+                            a) TCP/IP
+                            b) HTTP/HTTPS
+                            c) FTP
+                            d) SMTP/Post office Protocall
+
+                            2) Data (Seralize/ Deseralize)
+                            a) JSON
+                            b) XML
+                            c) txt
+
+                            3) Security
+                            a) Password based
+                            b) Key based
+                            c) open auth
+                            d) certificate
+                            e) SSO
+                            f) AD active directory
+
+                     <-------------------------------------------------
+                        receiving the response
+
+
+JSON (Javascript Object notation)
+====
+JSON is the universal format 
+JSON is used for the storing and exchanging data
+JSON store the data in Text
+JSON follow key values structure
+any decimal and number does not reuired ""
+structure
+------------
+{
+  "Key" : "Value"
+}
+e.g
+{
+  "Name" : "Yogesh",
+  "Phone" : 1234
+}
+
+create student data in JSON with first name and last name ,Phone
+{
+   "FirstName": "YOGESH",
+   "LastName": "Pokharkar" ,
+   "Phone" : "8421099"
+}
+
+create the json to store array of the city
+{
+  "City" : ["hyd", "Chen","bglr"]
+}
+
+create a json for storing the account information
+{
+    "Account" : [
+        {"Name" : "EPAM sys" ,"Industry" : "Education" "rating" : "Hot" , "Phone" : "123"},
+        {"Name" : "Ganesh sys" ,"Industry" : "Education" "rating" : "Hot" , "Phone" : "123"},
+        {"Name" : "ABC sys" ,"Industry" : "" "rating" : "Hot" , "Phone" : "123"}
+    ]} 
+
+create json to store ages
+{
+   "Age" :[10,20,30,40]
+}
+
+
+serilization
+=============
+conveting an object data into json is call serilization.
+
+Classes in salesforce to serilization and Deseralize
+-----------------------------------------------
+System namespace
+JSON Class - Manual Serilize / Deseralize
+JSONGenerator Class - Automatic/Dynamic - serilization
+JSONParser Class - Automatic/Dynamic - serilization
+JSONToken Enum - for genrating the enumarated token
