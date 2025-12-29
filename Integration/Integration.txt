@@ -129,3 +129,12 @@ JSON Class - Manual Serilize / Deseralize
 JSONGenerator Class - Automatic/Dynamic - serilization
 JSONParser Class - Automatic/Dynamic - serilization
 JSONToken Enum - for genrating the enumarated token
+
+deserilization
+==============
+converting JSON data Back to a Object form is called as deserilization.
+
+deserialize(JsonString, ApexType) => deserializes the specified JSON String into an apex object of the specified type.
+deserializeStrict(JsonString, ApexType) => deserializes the specified JSON String into an apex object of the specified type.
+deserializeUntyped(JsonString) => deserializes the specified JSON String into collection of primitive datatype.
+

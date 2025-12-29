@@ -1,0 +1,48 @@
+String JA ='10';
+Integer JAI = (Integer)JSON.deserialize(JA, Integer.class);
+
+System.debug('JSON deserialize format : ' + JAI*20);
+
+String JASal ='2500.50';
+Decimal Sal = (Decimal)JSON.deserialize(JASal, Decimal.class);
+System.debug('JSON deserialize format : ' + Sal);
+
+String JASal ='2500.50';
+Decimal Sal = (Decimal)JSON.deserialize(JASal, Decimal.class);
+System.debug('JSON deserialize format : ' + Sal);
+
+String Cust = '{"NAME":"Amir Tech" ,"Phone" : "1234", "FAX" :"123454"}';
+Account Acc = (Account)JSON.deserialize(Cust, Account.class);
+System.debug('JSON deserialize format : ' + Acc);
+insert Acc;
+
+//nither account and contact
+String JCust2 = '{"NAME":"Amir Tech" ,"Phone" : "1234", "FAX" :"123454", "FirstName":"yogesh","Email":"Yogeshpok12@gmail.com"}';
+Account Acc2 = (Account)JSON.deserialize(JCust2, Account.class);
+insert Acc2;
+
+//nither account and contact
+String JCust2 = '{"NAME":"Amir Tech" ,"Phone" : "1234", "FAX" :"123454", "FirstName":"yogesh","Email":"Yogeshpok12@gmail.com"}';
+//Account Acc2 = (Account)JSON.deserializeStrict(JCust2, Account.class);
+//insert Acc2;
+
+Map<String,Object> MAcc= (Map<String,Object>)JSON.deserializeUntyped(JCust2);
+System.debug('JSON deserialize MAcc format : ' + MAcc.values());
+System.debug('JSON deserialize MAcc format : ' + MAcc.Keyset());
+
+String Nm = (String)MAcc.get('NAME');
+String Ph = (String)MAcc.get('Phone');
+String Fx = (String)MAcc.get('FAX');
+String FN = (String)MAcc.get('FirstName');
+String EM = (String)MAcc.get('Email');
+
+Account AA = New Account();
+AA.Name = Nm;
+AA.Phone = Ph;
+AA.FAX = Fx;
+insert AA;
+
+Contact con = new Contact();
+con.FirstName = FN;
+Con.LastName = Nm ;
+insert con;
