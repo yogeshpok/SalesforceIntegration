@@ -138,3 +138,13 @@ deserialize(JsonString, ApexType) => deserializes the specified JSON String into
 deserializeStrict(JsonString, ApexType) => deserializes the specified JSON String into an apex object of the specified type.
 deserializeUntyped(JsonString) => deserializes the specified JSON String into collection of primitive datatype.
 
+XML
+========
+extensible markup lanaguage
+XML is designed to the store and transport the data
+XML is designed to be self-desciptive
+XML is designed to carry data not display data
+XML tags are not predefined we must define your own tags
+XML is platform Independent and Language independant
+XML uses DTD or schema to to describe data
+XML allows users to define the own tags and own document
