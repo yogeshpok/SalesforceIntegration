@@ -148,3 +148,20 @@ XML tags are not predefined we must define your own tags
 XML is platform Independent and Language independant
 XML uses DTD or schema to to describe data
 XML allows users to define the own tags and own document
+
+
+DOM namaespace :
+================
+Dom namespace provides classes and methods for parsing and creating the XML content
+
+Document class-> Use the Document class to process XML content You Can Parse nested xml content that up to 50 nodes desciptive
+
+XmlNode class -> Use the XmlNode class to work with node in an XML document.
+
+syntax: 
+DOM.Document xmldoc= new DOM.Document();
+
+createRootElement(name,namespace,prrefix)-> create the top level root element for a document
+getRootElement() -> return the top level root element node in the document.
+load() -> parse the XML representation of the document specified in the xml argument and load it into a document.
+toXmlString()-> retruns the XML representation of the document as a string
