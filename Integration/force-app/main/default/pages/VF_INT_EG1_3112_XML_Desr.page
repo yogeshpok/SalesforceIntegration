@@ -1,0 +1,14 @@
+<apex:page controller="CL_INT_EG1_3112_XML_Desr">
+    <apex:form >
+        <apex:pageBlock title="Simple Deseralization">
+           <apex:panelGrid columns="3" width="600">
+             
+              <apex:inputTextarea rows="6" cols="100" value="{!xmlString}" />
+               <apex:panelGrid columns="1">
+                  <apex:commandButton value="Convert" action="{!ConvertMe}" reRender="" />
+               </apex:panelGrid>
+               <apex:inputTextarea rows="6" cols="100" value="{!ParseData}" />
+            </apex:panelGrid>
+        </apex:pageBlock> 
+    </apex:form>
+</apex:page>
