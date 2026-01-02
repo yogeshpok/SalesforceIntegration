@@ -165,3 +165,53 @@ createRootElement(name,namespace,prrefix)-> create the top level root element fo
 getRootElement() -> return the top level root element node in the document.
 load() -> parse the XML representation of the document specified in the xml argument and load it into a document.
 toXmlString()-> retruns the XML representation of the document as a string
+
+Prtocol:-
+============
+HTTP hyper text transfer Protocall.
+HTTP is stateless.
+Once data handover then it will ends the connection.
+HTTP is connectionless.
+
+URL - Uniform resource locator
+URN - Uniform resource Name
+URI - Uniform resource Indentifier
+
+
+HTTP Class = Use the Http class to initiate an HTTP reuqest and response
+-----------
+send(request)
+Sends an HttpRequest and returns the response
+
+toString()
+Returns a string that displays and identifies the object's properties.
+
+HttpRequest class = Use the HttpRequest class to programatically crate HTTP request like GET,POST,PUT,DELETE
+--------------------
+HttpResponse class = Use the HttpResponse class to handle the HTTP response returned by the HTTP class
+---------------------
+https://developer.salesforce.com/docs/atlas.en-us.258.0.apexref.meta/apexref/apex_classes_restful_http_httprequest.htm
+https://developer.salesforce.com/docs/atlas.en-us.258.0.apexref.meta/apexref/apex_classes_restful_http_httpresponse.htm
+https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http.htm
+
+HTTPCalloutMock Interface = enable sending the fake resposes when testin HTTP callout.
+-------------------------
+
+Methods : 
+Get
+Post
+PUT
+DELETE
+Header
+
+01. HTTPRequest request = new HTTPRequest();
+    request.setEndPoint('www.yogesh.com/meterial');
+    request.setMethod(GET);
+
+02.  URL : http://www.icicibank.com/login
+     Method : Post
+
+
+     HTTPRequest request = new HTTPRequest();
+     request.setEndPoint('www.yogesh.com/meterial');
+     request.setMethod(Post);

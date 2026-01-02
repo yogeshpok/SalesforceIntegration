@@ -1,0 +1,11 @@
+<apex:page controller="CL_INTG_RT_0201_UtraceXML">
+    <apex:form id="op">
+        <apex:inputText value="{!IpAddress}" />
+        <apex:commandButton value="get Ip Details" action="{!CallUtrace}" reRender="op"  />
+        <apex:inputTextarea value="{!body}" id="op" />
+        <apex:dataTable value="{!res}" var="a"> 
+          <apex:column value="{!a}" headerValue="key" />
+          <apex:column value="{!res[a]}" headerValue="Data" />
+        </apex:dataTable>
+    </apex:form>
+</apex:page>
