@@ -1,0 +1,6 @@
+<apex:page controller="CL_INT_0201_Eg1_XMLDESRFromFile" >
+    <apex:form >
+        <apex:inputfile value="{!xmlfile}" fileName="Accountfile"></apex:inputfile>
+        <apex:commandButton value="Click here to import" action="{!Callme}" />
+    </apex:form>
+</apex:page>
