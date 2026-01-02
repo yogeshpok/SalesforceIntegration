@@ -1,0 +1,4 @@
+<apex:page controller="CL_INT_0201_Eg1_XMLDynamicAccount">
+    
+    {!XmlString}
+</apex:page>

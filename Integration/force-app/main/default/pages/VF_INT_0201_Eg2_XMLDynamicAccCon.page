@@ -1,0 +1,12 @@
+<apex:page controller="CL_INT_0201_Eg2_XMLDynamicAccCon">
+    <apex:form >
+        <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:inputTextarea value="{!XmlString}" id="rr" rows="50" cols="200"/>
+            <apex:commandButton value="convert"  action="{!AccConcreattion}" reRender=""     />
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+
+    
+</apex:page>
